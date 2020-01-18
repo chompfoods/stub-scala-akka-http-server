@@ -29,6 +29,7 @@ import java.math.BigDecimal
  * @param has_english_ingredients A boolean indicating if we have English ingredients for this item
  * @param minerals An array of minerals that this item contains
  * @param traces An array of trace ingredients that may be found in this item
+ * @param vitamins An array of vitamins that this item contains
  * @param common_name Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
  * @param description A description of this item
  * @param keywords An array of keywords that can be used to describe this item
@@ -59,6 +60,7 @@ case class BrandedFoodObject_items (
   has_english_ingredients: Option[Boolean],
   minerals: Option[List[String]],
   traces: Option[List[String]],
+  vitamins: Option[List[String]],
   common_name: Option[String],
   description: Option[String],
   keywords: Option[List[String]],
