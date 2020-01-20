@@ -75,14 +75,14 @@ class DefaultApi(
         }
       }
     } ~
-    path("ingredient" / "search.php") { 
+    path("food" / "ingredient" / "search.php") { 
       get {
         parameters("find".as[Int], "list".as[Boolean], "raw".as[Boolean].?, "limit".as[Int].?) { (find, list, raw, limit) =>
           
             
               
                 
-                  defaultService.ingredientSearchPhpGet(find = find, list = list, raw = raw, limit = limit)
+                  defaultService.foodIngredientSearchPhpGet(find = find, list = list, raw = raw, limit = limit)
                
              
            
@@ -186,17 +186,17 @@ trait DefaultApiService {
   def foodBrandedSearchPhpGet(allergen: Option[String], brand: Option[String], category: Option[String], country: Option[String], diet: Option[String], ingredient: Option[String], keyword: Option[String], mineral: Option[String], nutrient: Option[String], palmOil: Option[String], trace: Option[String], vitamin: Option[String], limit: Option[Int], page: Option[Int])
       (implicit toEntityMarshallerBrandedFoodObject: ToEntityMarshaller[BrandedFoodObject]): Route
 
-  def ingredientSearchPhpGet200(responseIngredientObject: IngredientObject)(implicit toEntityMarshallerIngredientObject: ToEntityMarshaller[IngredientObject]): Route =
+  def foodIngredientSearchPhpGet200(responseIngredientObject: IngredientObject)(implicit toEntityMarshallerIngredientObject: ToEntityMarshaller[IngredientObject]): Route =
     complete((200, responseIngredientObject))
-  def ingredientSearchPhpGet400: Route =
+  def foodIngredientSearchPhpGet400: Route =
     complete((400, "__Validation error__ - Invalid parameters or request."))
-  def ingredientSearchPhpGet401: Route =
+  def foodIngredientSearchPhpGet401: Route =
     complete((401, "__Unauthorized__ - Invalid API key or usage limits exceeded. _[More information](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)_"))
-  def ingredientSearchPhpGet403: Route =
+  def foodIngredientSearchPhpGet403: Route =
     complete((403, "__Forbidden__ - Disallowed entity."))
-  def ingredientSearchPhpGet404: Route =
+  def foodIngredientSearchPhpGet404: Route =
     complete((404, "__Not found__ - No food items exist that match your query parameters."))
-  def ingredientSearchPhpGet500: Route =
+  def foodIngredientSearchPhpGet500: Route =
     complete((500, "__Server error__ - Internal server error, request failed, or base error. _[Contact us](https://chompthis.com/api/ticket-new.php) if you see this._"))
   /**
    * Code: 200, Message: __Valid__ - Will return an object containing any matching ingredient foods., DataType: IngredientObject
@@ -206,7 +206,7 @@ trait DefaultApiService {
    * Code: 404, Message: __Not found__ - No food items exist that match your query parameters.
    * Code: 500, Message: __Server error__ - Internal server error, request failed, or base error. _[Contact us](https://chompthis.com/api/ticket-new.php) if you see this._
    */
-  def ingredientSearchPhpGet(find: Int, list: Boolean, raw: Option[Boolean], limit: Option[Int])
+  def foodIngredientSearchPhpGet(find: Int, list: Boolean, raw: Option[Boolean], limit: Option[Int])
       (implicit toEntityMarshallerIngredientObject: ToEntityMarshaller[IngredientObject]): Route
 
 }
