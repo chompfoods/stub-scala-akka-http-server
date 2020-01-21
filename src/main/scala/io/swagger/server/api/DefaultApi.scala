@@ -47,12 +47,12 @@ class DefaultApi(
     } ~
     path("food" / "branded" / "name.php") { 
       get {
-        parameters("name".as[String], "limit".as[Int].?) { (name, limit) =>
+        parameters("name".as[String], "limit".as[Int].?, "page".as[Int].?) { (name, limit, page) =>
           
             
               
                 
-                  defaultService.foodBrandedNamePhpGet(name = name, limit = limit)
+                  defaultService.foodBrandedNamePhpGet(name = name, limit = limit, page = page)
                
              
            
@@ -160,7 +160,7 @@ trait DefaultApiService {
    * Code: 404, Message: __Not found__ - No food items exist that match your query parameters.
    * Code: 500, Message: __Server error__ - Internal server error, request failed, or base error. _[Contact us](https://chompthis.com/api/ticket-new.php) if you see this._
    */
-  def foodBrandedNamePhpGet(name: String, limit: Option[Int])
+  def foodBrandedNamePhpGet(name: String, limit: Option[Int], page: Option[Int])
       (implicit toEntityMarshallerBrandedFoodObject: ToEntityMarshaller[BrandedFoodObject]): Route
 
   def foodBrandedSearchPhpGet200(responseBrandedFoodObject: BrandedFoodObject)(implicit toEntityMarshallerBrandedFoodObject: ToEntityMarshaller[BrandedFoodObject]): Route =
