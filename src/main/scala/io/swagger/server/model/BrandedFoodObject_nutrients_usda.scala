@@ -10,10 +10,10 @@ import java.math.BigDecimal
  * @param min Minimum nutrient value
  * @param max Maximum nutrient value
  * @param median Median nutrient value
+ * @param rank Nutrient rank
  * @param data_points Number of observations on which the value is based
  * @param footnote Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected.
- * @param source Description of the nutrient source
- * @param description Description of how the food nutrient value was obtained
+ * @param description Description of the nutrient source
  */
 case class BrandedFoodObject_nutrients_usda (
   id: Option[Int],
@@ -23,9 +23,9 @@ case class BrandedFoodObject_nutrients_usda (
   min: Option[BigDecimal],
   max: Option[BigDecimal],
   median: Option[BigDecimal],
+  rank: Option[Int],
   data_points: Option[Int],
   footnote: Option[String],
-  source: Option[String],
   description: Option[String]
 )
 
