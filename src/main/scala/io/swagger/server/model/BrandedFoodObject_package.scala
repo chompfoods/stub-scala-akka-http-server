@@ -9,6 +9,6 @@ package io.swagger.server.model
  */
 case class BrandedFoodObject_package (
   quantity: Option[Int],
-  size: Option[Int]
+  size: Option[String]
 )
 
