@@ -13,7 +13,7 @@ import java.math.BigDecimal
  * @param diet_labels 
  * @param components An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
  * @param portions An array of objects containing information on discrete amounts of a food found in this item
- * @param common_name Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
+ * @param common_names Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
  * @param description A description of this item
  * @param footnote Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
  */
@@ -26,7 +26,7 @@ case class IngredientObject_items (
   diet_labels: Option[BrandedFoodObject_diet_labels],
   components: Option[List[BrandedFoodObject_components]],
   portions: Option[List[BrandedFoodObject_portions]],
-  common_name: Option[String],
+  common_names: Option[String],
   description: Option[String],
   footnote: Option[String]
 )
