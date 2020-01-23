@@ -21,7 +21,7 @@ case class IngredientObject_items (
   name: Option[String],
   categories: Option[List[String]],
   nutrients: Option[IngredientObject_nutrients],
-  calorie_conversion_factor: Option[BrandedFoodObject_calorie_conversion_factor],
+  calorie_conversion_factor: Option[IngredientObject_calorie_conversion_factor],
   protein_conversion_factor: Option[BigDecimal],
   diet_labels: Option[BrandedFoodObject_diet_labels],
   components: Option[List[IngredientObject_components]],

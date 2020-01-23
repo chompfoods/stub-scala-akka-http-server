@@ -1,6 +1,5 @@
 package io.swagger.server.model
 
-import java.math.BigDecimal
 
 /**
  * An object containing information for this specific item.
@@ -13,8 +12,6 @@ import java.math.BigDecimal
  * @param serving 
  * @param categories 
  * @param nutrients 
- * @param calorie_conversion_factor 
- * @param protein_conversion_factor The multiplication factor used to calculate protein from nitrogen
  * @param diet_labels 
  * @param diet_flags An array of ingredient objects that were flagged while grading this item for compatibility with each diet
  * @param packaging_photos 
@@ -40,8 +37,6 @@ case class BrandedFoodObject_items (
   serving: Option[BrandedFoodObject_serving],
   categories: Option[List[String]],
   nutrients: Option[BrandedFoodObject_nutrients],
-  calorie_conversion_factor: Option[BrandedFoodObject_calorie_conversion_factor],
-  protein_conversion_factor: Option[BigDecimal],
   diet_labels: Option[BrandedFoodObject_diet_labels],
   diet_flags: Option[List[BrandedFoodObject_diet_flags]],
   packaging_photos: Option[BrandedFoodObject_packaging_photos],
