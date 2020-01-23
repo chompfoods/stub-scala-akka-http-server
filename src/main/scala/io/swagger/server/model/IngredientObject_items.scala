@@ -7,7 +7,7 @@ import java.math.BigDecimal
  *
  * @param name Item name as provided by brand owner or as shown on packaging
  * @param categories 
- * @param nutrients 
+ * @param nutrients An array containing nutrient informatio objects for this food item
  * @param calorie_conversion_factor 
  * @param protein_conversion_factor The multiplication factor used to calculate protein from nitrogen
  * @param diet_labels 
@@ -20,7 +20,7 @@ import java.math.BigDecimal
 case class IngredientObject_items (
   name: Option[String],
   categories: Option[List[String]],
-  nutrients: Option[IngredientObject_nutrients],
+  nutrients: Option[List[IngredientObject_nutrients]],
   calorie_conversion_factor: Option[IngredientObject_calorie_conversion_factor],
   protein_conversion_factor: Option[BigDecimal],
   diet_labels: Option[BrandedFoodObject_diet_labels],

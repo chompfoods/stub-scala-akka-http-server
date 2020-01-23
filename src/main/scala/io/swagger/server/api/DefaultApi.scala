@@ -30,21 +30,6 @@ class DefaultApi(
         }
       }
     } ~
-    path("food" / "branded" / "id.php") { 
-      get {
-        parameters("id".as[Int], "source".as[String].?) { (id, source) =>
-          
-            
-              
-                
-                  defaultService.foodBrandedIdPhpGet(id = id, source = source)
-               
-             
-           
-         
-        }
-      }
-    } ~
     path("food" / "branded" / "name.php") { 
       get {
         parameters("name".as[String], "limit".as[Int].?, "page".as[Int].?) { (name, limit, page) =>
@@ -115,29 +100,6 @@ trait DefaultApiService {
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
   def foodBrandedBarcodePhpGet(code: String)
-      (implicit toEntityMarshallerBrandedFoodObject: ToEntityMarshaller[BrandedFoodObject]): Route
-
-  def foodBrandedIdPhpGet200(responseBrandedFoodObject: BrandedFoodObject)(implicit toEntityMarshallerBrandedFoodObject: ToEntityMarshaller[BrandedFoodObject]): Route =
-    complete((200, responseBrandedFoodObject))
-  def foodBrandedIdPhpGet400: Route =
-    complete((400, "**Validation error** - Invalid parameters or request. "))
-  def foodBrandedIdPhpGet401: Route =
-    complete((401, "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "))
-  def foodBrandedIdPhpGet403: Route =
-    complete((403, "**Forbidden** - Disallowed entity. "))
-  def foodBrandedIdPhpGet404: Route =
-    complete((404, "**Not found** - No food items exist that match your query parameters. "))
-  def foodBrandedIdPhpGet500: Route =
-    complete((500, "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* "))
-  /**
-   * Code: 200, Message: **Valid** - Will return an object containing any matching foods.  , DataType: BrandedFoodObject
-   * Code: 400, Message: **Validation error** - Invalid parameters or request. 
-   * Code: 401, Message: **Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** 
-   * Code: 403, Message: **Forbidden** - Disallowed entity. 
-   * Code: 404, Message: **Not found** - No food items exist that match your query parameters. 
-   * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
-   */
-  def foodBrandedIdPhpGet(id: Int, source: Option[String])
       (implicit toEntityMarshallerBrandedFoodObject: ToEntityMarshaller[BrandedFoodObject]): Route
 
   def foodBrandedNamePhpGet200(responseBrandedFoodObject: BrandedFoodObject)(implicit toEntityMarshallerBrandedFoodObject: ToEntityMarshaller[BrandedFoodObject]): Route =
@@ -212,8 +174,6 @@ trait DefaultApiService {
 }
 
 trait DefaultApiMarshaller {
-
-  implicit def toEntityMarshallerBrandedFoodObject: ToEntityMarshaller[BrandedFoodObject]
 
   implicit def toEntityMarshallerBrandedFoodObject: ToEntityMarshaller[BrandedFoodObject]
 

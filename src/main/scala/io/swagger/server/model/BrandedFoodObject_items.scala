@@ -7,11 +7,11 @@ package io.swagger.server.model
  * @param barcode EAN/UPC barcode
  * @param name Item name as provided by brand owner or as shown on packaging
  * @param brand The brand name that owns this item
- * @param ingredients 
+ * @param ingredients This food item's ingredients from greatest quantity to least
  * @param `package` 
  * @param serving 
  * @param categories 
- * @param nutrients 
+ * @param nutrients An array containing nutrient informatio objects for this food item
  * @param diet_labels 
  * @param diet_flags An array of ingredient objects that were flagged while grading this item for compatibility with each diet
  * @param packaging_photos 
@@ -32,11 +32,11 @@ case class BrandedFoodObject_items (
   barcode: Option[String],
   name: Option[String],
   brand: Option[String],
-  ingredients: Option[BrandedFoodObject_ingredients],
+  ingredients: Option[String],
   `package`: Option[BrandedFoodObject_package],
   serving: Option[BrandedFoodObject_serving],
   categories: Option[List[String]],
-  nutrients: Option[BrandedFoodObject_nutrients],
+  nutrients: Option[List[BrandedFoodObject_nutrients]],
   diet_labels: Option[BrandedFoodObject_diet_labels],
   diet_flags: Option[List[BrandedFoodObject_diet_flags]],
   packaging_photos: Option[BrandedFoodObject_packaging_photos],
