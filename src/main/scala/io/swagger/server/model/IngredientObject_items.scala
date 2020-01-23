@@ -24,8 +24,8 @@ case class IngredientObject_items (
   calorie_conversion_factor: Option[BrandedFoodObject_calorie_conversion_factor],
   protein_conversion_factor: Option[BigDecimal],
   diet_labels: Option[BrandedFoodObject_diet_labels],
-  components: Option[List[BrandedFoodObject_components]],
-  portions: Option[List[BrandedFoodObject_portions]],
+  components: Option[List[IngredientObject_components]],
+  portions: Option[List[IngredientObject_portions]],
   common_names: Option[String],
   description: Option[String],
   footnote: Option[String]
