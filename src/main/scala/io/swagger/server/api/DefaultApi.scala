@@ -85,8 +85,6 @@ trait DefaultApiService {
     complete((400, "**Validation error** - Invalid parameters or request. "))
   def foodBrandedBarcodePhpGet401: Route =
     complete((401, "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "))
-  def foodBrandedBarcodePhpGet403: Route =
-    complete((403, ""))
   def foodBrandedBarcodePhpGet404: Route =
     complete((404, "**Not found** - No food items were found. "))
   def foodBrandedBarcodePhpGet500: Route =
@@ -95,7 +93,6 @@ trait DefaultApiService {
    * Code: 200, Message: **Valid** - Will return an object containing any matching foods.  , DataType: BrandedFoodObject
    * Code: 400, Message: **Validation error** - Invalid parameters or request. 
    * Code: 401, Message: **Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** 
-   * Code: 403
    * Code: 404, Message: **Not found** - No food items were found. 
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
@@ -108,8 +105,6 @@ trait DefaultApiService {
     complete((400, "**Validation error** - Invalid parameters or request. "))
   def foodBrandedNamePhpGet401: Route =
     complete((401, "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "))
-  def foodBrandedNamePhpGet403: Route =
-    complete((403, ""))
   def foodBrandedNamePhpGet404: Route =
     complete((404, "**Not found** - No food items were found. "))
   def foodBrandedNamePhpGet500: Route =
@@ -118,7 +113,6 @@ trait DefaultApiService {
    * Code: 200, Message: **Valid** - Will return an object containing any matching foods.  , DataType: BrandedFoodObject
    * Code: 400, Message: **Validation error** - Invalid parameters or request. 
    * Code: 401, Message: **Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** 
-   * Code: 403
    * Code: 404, Message: **Not found** - No food items were found. 
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
@@ -131,8 +125,6 @@ trait DefaultApiService {
     complete((400, "**Validation error** - Invalid parameters or request. "))
   def foodBrandedSearchPhpGet401: Route =
     complete((401, "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "))
-  def foodBrandedSearchPhpGet403: Route =
-    complete((403, ""))
   def foodBrandedSearchPhpGet404: Route =
     complete((404, "**Not found** - No food items were found. "))
   def foodBrandedSearchPhpGet500: Route =
@@ -141,7 +133,6 @@ trait DefaultApiService {
    * Code: 200, Message: **Valid** - Will return an object containing any matching foods.  , DataType: BrandedFoodObject
    * Code: 400, Message: **Validation error** - Invalid parameters or request. 
    * Code: 401, Message: **Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** 
-   * Code: 403
    * Code: 404, Message: **Not found** - No food items were found. 
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
@@ -154,8 +145,6 @@ trait DefaultApiService {
     complete((400, "**Validation error** - Invalid parameters or request. "))
   def foodIngredientSearchPhpGet401: Route =
     complete((401, "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "))
-  def foodIngredientSearchPhpGet403: Route =
-    complete((403, ""))
   def foodIngredientSearchPhpGet404: Route =
     complete((404, "**Not found** - No food items were found. "))
   def foodIngredientSearchPhpGet500: Route =
@@ -164,7 +153,6 @@ trait DefaultApiService {
    * Code: 200, Message: **Valid** - Will return an object containing any matching ingredient foods.  , DataType: IngredientObject
    * Code: 400, Message: **Validation error** - Invalid parameters or request. 
    * Code: 401, Message: **Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** 
-   * Code: 403
    * Code: 404, Message: **Not found** - No food items were found. 
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
