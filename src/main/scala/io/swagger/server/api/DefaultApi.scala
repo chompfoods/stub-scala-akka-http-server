@@ -86,17 +86,17 @@ trait DefaultApiService {
   def foodBrandedBarcodePhpGet401: Route =
     complete((401, "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "))
   def foodBrandedBarcodePhpGet403: Route =
-    complete((403, "**Forbidden** - Disallowed entity. "))
+    complete((403, ""))
   def foodBrandedBarcodePhpGet404: Route =
-    complete((404, "**Not found** - No food items exist that match your query parameters. "))
+    complete((404, "**Not found** - No food items were found. "))
   def foodBrandedBarcodePhpGet500: Route =
     complete((500, "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* "))
   /**
    * Code: 200, Message: **Valid** - Will return an object containing any matching foods.  , DataType: BrandedFoodObject
    * Code: 400, Message: **Validation error** - Invalid parameters or request. 
    * Code: 401, Message: **Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** 
-   * Code: 403, Message: **Forbidden** - Disallowed entity. 
-   * Code: 404, Message: **Not found** - No food items exist that match your query parameters. 
+   * Code: 403
+   * Code: 404, Message: **Not found** - No food items were found. 
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
   def foodBrandedBarcodePhpGet(code: String)
@@ -109,17 +109,17 @@ trait DefaultApiService {
   def foodBrandedNamePhpGet401: Route =
     complete((401, "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "))
   def foodBrandedNamePhpGet403: Route =
-    complete((403, "**Forbidden** - Disallowed entity. "))
+    complete((403, ""))
   def foodBrandedNamePhpGet404: Route =
-    complete((404, "**Not found** - No food items exist that match your query parameters. "))
+    complete((404, "**Not found** - No food items were found. "))
   def foodBrandedNamePhpGet500: Route =
     complete((500, "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* "))
   /**
    * Code: 200, Message: **Valid** - Will return an object containing any matching foods.  , DataType: BrandedFoodObject
    * Code: 400, Message: **Validation error** - Invalid parameters or request. 
    * Code: 401, Message: **Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** 
-   * Code: 403, Message: **Forbidden** - Disallowed entity. 
-   * Code: 404, Message: **Not found** - No food items exist that match your query parameters. 
+   * Code: 403
+   * Code: 404, Message: **Not found** - No food items were found. 
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
   def foodBrandedNamePhpGet(name: String, limit: Option[Int], page: Option[Int])
@@ -132,17 +132,17 @@ trait DefaultApiService {
   def foodBrandedSearchPhpGet401: Route =
     complete((401, "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "))
   def foodBrandedSearchPhpGet403: Route =
-    complete((403, "**Forbidden** - Disallowed entity. "))
+    complete((403, ""))
   def foodBrandedSearchPhpGet404: Route =
-    complete((404, "**Not found** - No food items exist that match your query parameters. "))
+    complete((404, "**Not found** - No food items were found. "))
   def foodBrandedSearchPhpGet500: Route =
     complete((500, "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* "))
   /**
    * Code: 200, Message: **Valid** - Will return an object containing any matching foods.  , DataType: BrandedFoodObject
    * Code: 400, Message: **Validation error** - Invalid parameters or request. 
    * Code: 401, Message: **Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** 
-   * Code: 403, Message: **Forbidden** - Disallowed entity. 
-   * Code: 404, Message: **Not found** - No food items exist that match your query parameters. 
+   * Code: 403
+   * Code: 404, Message: **Not found** - No food items were found. 
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
   def foodBrandedSearchPhpGet(allergen: Option[String], brand: Option[String], category: Option[String], country: Option[String], diet: Option[String], ingredient: Option[String], keyword: Option[String], mineral: Option[String], nutrient: Option[String], palmOil: Option[String], trace: Option[String], vitamin: Option[String], limit: Option[Int], page: Option[Int])
@@ -155,17 +155,17 @@ trait DefaultApiService {
   def foodIngredientSearchPhpGet401: Route =
     complete((401, "**Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** "))
   def foodIngredientSearchPhpGet403: Route =
-    complete((403, "**Forbidden** - Disallowed entity. "))
+    complete((403, ""))
   def foodIngredientSearchPhpGet404: Route =
-    complete((404, "**Not found** - No food items exist that match your query parameters. "))
+    complete((404, "**Not found** - No food items were found. "))
   def foodIngredientSearchPhpGet500: Route =
     complete((500, "**Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* "))
   /**
    * Code: 200, Message: **Valid** - Will return an object containing any matching ingredient foods.  , DataType: IngredientObject
    * Code: 400, Message: **Validation error** - Invalid parameters or request. 
    * Code: 401, Message: **Unauthorized** - Invalid API key or usage limits exceeded. ***[More information &amp;raquo;](https://desk.zoho.com/portal/chompthis/kb/articles/what-is-a-rate-limit)*** 
-   * Code: 403, Message: **Forbidden** - Disallowed entity. 
-   * Code: 404, Message: **Not found** - No food items exist that match your query parameters. 
+   * Code: 403
+   * Code: 404, Message: **Not found** - No food items were found. 
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
   def foodIngredientSearchPhpGet(find: Int, list: Boolean, raw: Option[Boolean], limit: Option[Int])
