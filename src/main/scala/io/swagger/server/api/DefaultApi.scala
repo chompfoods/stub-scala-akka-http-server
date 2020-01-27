@@ -62,7 +62,7 @@ class DefaultApi(
     } ~
     path("food" / "ingredient" / "search.php") { 
       get {
-        parameters("find".as[Int], "raw".as[Boolean].?, "limit".as[Int].?) { (find, raw, limit) =>
+        parameters("find".as[String], "raw".as[Boolean].?, "limit".as[Int].?) { (find, raw, limit) =>
           
             
               
@@ -156,7 +156,7 @@ trait DefaultApiService {
    * Code: 404, Message: **Not found** - No food items were found. 
    * Code: 500, Message: **Server error** - Internal server error, request failed, or base error. *Please **[contact us](https://chompthis.com/api/ticket-new.php)** if you see this.* 
    */
-  def foodIngredientSearchPhpGet(find: Int, raw: Option[Boolean], limit: Option[Int])
+  def foodIngredientSearchPhpGet(find: String, raw: Option[Boolean], limit: Option[Int])
       (implicit toEntityMarshallerIngredientObject: ToEntityMarshaller[IngredientObject]): Route
 
 }
