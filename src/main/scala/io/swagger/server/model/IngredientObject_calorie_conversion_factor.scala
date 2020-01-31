@@ -9,7 +9,7 @@ import java.math.BigDecimal
  * @param fat_value The multiplication factor for fat
  * @param carbohydrate_value The multiplication factor for carbohydrates
  */
-case class BrandedFoodObject_calorie_conversion_factor (
+case class IngredientObject_calorie_conversion_factor (
   protein_value: Option[BigDecimal],
   fat_value: Option[BigDecimal],
   carbohydrate_value: Option[BigDecimal]

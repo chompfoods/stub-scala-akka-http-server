@@ -1,6 +1,5 @@
 package io.swagger.server.model
 
-import java.math.BigDecimal
 
 /**
  * An object containing information for this specific item.
@@ -8,18 +7,14 @@ import java.math.BigDecimal
  * @param barcode EAN/UPC barcode
  * @param name Item name as provided by brand owner or as shown on packaging
  * @param brand The brand name that owns this item
- * @param ingredients Ingredients in order of highest value to least
+ * @param ingredients This food item's ingredients from greatest quantity to least
  * @param `package` 
  * @param serving 
  * @param categories 
- * @param nutrients 
- * @param calorie_conversion_factor 
- * @param protein_conversion_factor The multiplication factor used to calculate protein from nitrogen
+ * @param nutrients An array containing nutrient informatio objects for this food item
  * @param diet_labels 
  * @param diet_flags An array of ingredient objects that were flagged while grading this item for compatibility with each diet
  * @param packaging_photos 
- * @param components An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
- * @param portions An array of objects containing information on discrete amounts of a food found in this item
  * @param allergens An array of ingredients in this item that may cause allergic reactions in people
  * @param brand_list An array of brands we have associated with this item. Some items are sold by more than 1 brand.
  * @param countries An array of countries where this item is sold
@@ -29,10 +24,9 @@ import java.math.BigDecimal
  * @param has_english_ingredients A boolean indicating if we have English ingredients for this item
  * @param minerals An array of minerals that this item contains
  * @param traces An array of trace ingredients that may be found in this item
- * @param common_name Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
+ * @param vitamins An array of vitamins that are found in this item
  * @param description A description of this item
  * @param keywords An array of keywords that can be used to describe this item
- * @param footnote Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
  */
 case class BrandedFoodObject_items (
   barcode: Option[String],
@@ -42,14 +36,10 @@ case class BrandedFoodObject_items (
   `package`: Option[BrandedFoodObject_package],
   serving: Option[BrandedFoodObject_serving],
   categories: Option[List[String]],
-  nutrients: Option[BrandedFoodObject_nutrients],
-  calorie_conversion_factor: Option[BrandedFoodObject_calorie_conversion_factor],
-  protein_conversion_factor: Option[BigDecimal],
+  nutrients: Option[List[BrandedFoodObject_nutrients]],
   diet_labels: Option[BrandedFoodObject_diet_labels],
   diet_flags: Option[List[BrandedFoodObject_diet_flags]],
   packaging_photos: Option[BrandedFoodObject_packaging_photos],
-  components: Option[List[BrandedFoodObject_components]],
-  portions: Option[List[BrandedFoodObject_portions]],
   allergens: Option[List[String]],
   brand_list: Option[List[String]],
   countries: Option[List[String]],
@@ -59,9 +49,8 @@ case class BrandedFoodObject_items (
   has_english_ingredients: Option[Boolean],
   minerals: Option[List[String]],
   traces: Option[List[String]],
-  common_name: Option[String],
+  vitamins: Option[List[String]],
   description: Option[String],
-  keywords: Option[List[String]],
-  footnote: Option[String]
+  keywords: Option[List[String]]
 )
 

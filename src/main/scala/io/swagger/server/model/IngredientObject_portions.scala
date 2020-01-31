@@ -12,7 +12,7 @@ import java.math.BigDecimal
  * @param data_points The number of observations on which the measure is based
  * @param footnote Comments on any unusual aspects of the measure. Examples might includes caveats on the usage of a measure, or reasons why a measure gram weight is an unexpected value.
  */
-case class BrandedFoodObject_portions (
+case class IngredientObject_portions (
   measurement_unit: Option[String],
   description: Option[String],
   modifier: Option[String],

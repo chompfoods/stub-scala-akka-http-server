@@ -11,7 +11,7 @@ import java.math.BigDecimal
  * @param is_refuse Whether the component is refuse, i.e. not edible
  * @param data_points The number of obersvations on which the measure is based
  */
-case class BrandedFoodObject_components (
+case class IngredientObject_components (
   name: Option[String],
   pct_weight: Option[BigDecimal],
   gram_weight: Option[BigDecimal],
